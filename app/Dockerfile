@@ -8,7 +8,7 @@ RUN apk add make
 # ============================================
 # Stage 2: build application
 # ============================================
-FROM runtime as builder
+FROM runtime AS builder
 
 WORKDIR /app
 
