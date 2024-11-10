@@ -8,13 +8,14 @@ Application is two or one endpoint(s) availiable from public/local network.
 /greet_internal
 
 scailability: 1k/rpm or 7k/rpm
+environments: one or multi
 
 ## 1. Project Setup
 - [X] Define project requirements (functionality, endpoints, scalability).
 - [X] Set up a version-controlled repository (e.g., GitHub).
 
 ## 2. Dockerize the Golang Application
-- [ ] Write a Dockerfile optimized for Golang (multi-stage build).
+- [X] Write a Dockerfile optimized for Golang (multi-stage build).
 - [ ] Configure environment variables for different environments.
 - [ ] Test the Dockerized application locally.
 
