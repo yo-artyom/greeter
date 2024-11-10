@@ -2,6 +2,5 @@
 .github
 .gitignore
 Dockerfile
-Makefile
 *.md
 build

@@ -3,6 +3,7 @@
 # install dependency required for builder
 # ============================================
 FROM golang:1.23.3-alpine3.19 AS runtime
+RUN apk add make
 
 # ============================================
 # Stage 2: build application
@@ -16,7 +17,7 @@ RUN go mod download
 
 COPY . .
 
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o greeter ./cmd/main.go
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 make build
 
 # ============================================
 # Stage 3: run the app
