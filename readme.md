@@ -17,11 +17,11 @@ environments: one or multi
 ## 2. Dockerize the Golang Application
 - [X] Write a Dockerfile optimized for Golang (multi-stage build).
 - [ ] Configure environment variables for different environments.
-- [ ] Test the Dockerized application locally.
+- [X] Test the Dockerized application locally.
 
 ## 3. EKS Cluster Setup
-- [ ] Set up an EKS cluster with node groups using Terraform or AWS CloudFormation.
-- [ ] Define IAM roles and permissions for EKS nodes and services.
+- [X] Set up an EKS cluster with node groups using Terraform or AWS CloudFormation.
+- [X] Define IAM roles and permissions for EKS nodes and services.
 - [ ] Configure VPC, subnets, and security groups for internal and external traffic.
 
 ## 4. CI/CD Pipeline
