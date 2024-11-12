@@ -1,10 +1,16 @@
-# Draft
-
-# Main
 # Golang Platform on EKS - Checklist
+
+## App summary
 Application must count in memory how many times was executed.
+
 Application has one endpoint(s) availiable from public/private network.
+
 environments: one or multi
+
+### Folder structure: 
+
+* `/app` -  dockerized application codebase
+* `/platform` - platform related codebase
 
 ## 1. Project Setup
 - [X] Define project requirements (functionality, endpoints, scalability).
