@@ -1,11 +1,11 @@
 .PHONY: all app infrastructure
 
 app:
-	cd app && terraform apply
+	cd apps/greeter && terraform apply
 
 aws:
-	cd infrastructure/aws && terraform apply
+	cd infrastructure/shared/aws && terraform apply
 
 github:
-	cd infrastructure/github && terraform apply
+	cd infrastructure/shared/github && terraform apply
 

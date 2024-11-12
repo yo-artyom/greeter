@@ -1,10 +1,5 @@
 locals {
-  cluster_name = "base-eks-${random_string.suffix.result}"
-}
-
-resource "random_string" "suffix" {
-  length  = 8
-  special = false
+  cluster_name = "base-eks"
 }
 
 module "eks" {
@@ -14,7 +9,9 @@ module "eks" {
   cluster_name    = local.cluster_name
   cluster_version = "1.29"
 
-  cluster_endpoint_public_access           = true
+  cluster_endpoint_public_access       = true
+  cluster_endpoint_public_access_cidrs = ["0.0.0.0/0"]
+
   enable_cluster_creator_admin_permissions = true
 
   cluster_addons = {

@@ -2,12 +2,8 @@
 
 # Main
 # Golang Platform on EKS - Checklist
-Application must count in memory/db how many times was executed.
-Application is two or one endpoint(s) availiable from public/local network.
-/greet_public
-/greet_internal
-
-scailability: 1k/rpm or 7k/rpm
+Application must count in memory how many times was executed.
+Application has one endpoint(s) availiable from public/private network.
 environments: one or multi
 
 ## 1. Project Setup
@@ -25,8 +21,8 @@ environments: one or multi
 - [ ] Configure VPC, subnets, and security groups for internal and external traffic.
 
 ## 4. CI/CD Pipeline
-- [ ] Set up a CI/CD pipeline (e.g., GitHub Actions, Jenkins) for Docker image build and push.
-- [ ] Automate Docker image push to Amazon ECR.
+- [X] Set up a CI/CD pipeline (e.g., GitHub Actions, Jenkins) for Docker image build and push.
+- [X] Automate Docker image push to Amazon ECR.
 - [ ] Configure deployment pipeline for EKS (using Kubernetes manifests or Helm charts).
 - [ ] Automate EKS resource updates (node configuration, scaling).
 
@@ -34,24 +30,3 @@ environments: one or multi
 - [ ] Create Kubernetes manifests or Helm charts for deploying Golang app (Deployment, Service, ConfigMap, Secret).
 - [ ] Configure Kubernetes namespaces for environment isolation.
 - [ ] Set resource limits for application pods.
-
-## 6. Observability and Monitoring
-- [ ] Integrate Prometheus for metrics collection.
-- [ ] Set up Grafana for visualization.
-- [ ] Configure Fluentd or AWS CloudWatch for log management.
-- [ ] Set up alerting rules based on performance metrics.
-
-## 7. Scaling and Load Testing
-- [ ] Configure Horizontal Pod Autoscaling based on CPU and memory.
-- [ ] Perform load testing using Locust or JMeter.
-
-## 8. Security and Compliance
-- [ ] Implement container image scanning for vulnerabilities.
-- [ ] Set up Kubernetes Role-Based Access Control (RBAC) for restricted access.
-- [ ] Use Kubernetes Secrets or AWS Secrets Manager for sensitive data.
-
-## 9. Continuous Improvements
-- [ ] Schedule regular updates for EKS, Docker images, and Kubernetes configs.
-- [ ] Analyze resource usage and optimize for cost and performance.
-
-
